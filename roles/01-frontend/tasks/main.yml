@@ -1,5 +1,5 @@
-- name: Printing Component
-  hosts: all
-  tasks:
+ - name: Printing Component
+   hosts: all
+   tasks:
     ansible.builtin.debug:
       msg: This is {{COMPONENT}}
