@@ -1,13 +1,3 @@
-
-#
-#ECHO "Enabling and Startting Webserver NGINX"
-#systemctl enable nginx &>>${LOG_FILE} && systemctl start nginx &>>${LOG_FILE}
-#CheckStatus $?
-#
-#ECHO "Downloading Frontend Code"
-#curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>${LOG_FILE}
-#CheckStatus $?
-#
 #ECHO "Moving to the HTML folder of Webserver"
 #cd /usr/share/nginx/html &>>${LOG_FILE}
 #CheckStatus $?
@@ -43,3 +33,8 @@
   yum:
      name: nginx
      state: installed
+
+- name: Download foo.conf
+  get_url:
+     url: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+     dest: /tmp/frontend.zip
