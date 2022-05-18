@@ -10,6 +10,6 @@
 # Instead of writing a seperate play book for each component we can write a single playbook as below
 
  - name: Robohshop Playbook
-   hosts: "{{Host}}"
+   hosts: "{{HOST}}"
    roles:
-    - "{{Role_name}}"
+    - "{{ROLE_NAME}}"
