@@ -11,5 +11,6 @@
 
  - name: Robohshop Playbook
    hosts: "{{HOSTS}}"
+   become: yes
    roles:
     - "{{ROLE_NAME}}"
